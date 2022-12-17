@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> welcome To P&P Shop </title>
+  <link rel="icon" href="img/titleicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+  <script src="main.js"></script>
+  <header>
+    <a href="#" class="logo" style="size:100px;">
+      Pink and purple shop</a>
+    <div class="content">
+
+      <div class="rightnav">
+        <ul>
+          <li><a href="product.html"><span>Products</span></a></li>
+          <li><a href="#container"><span>Search</span></a></li>
+          <li><a href="rating.html"><span>Ratings & review</span></a></li>
+          <li><a href="#feedback"><span>Feedback</span></a></li>
+          <li><a href="#contact"><span>Contacts</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="home" id="home">
+
+   
+  </section>
+
+  <section id="search">
+    <div class="container" id="container">
+      <div class="search-bar">
+        <div id="select">
+          <p id="selectext">All Categories</p>
+          <ul id="list">
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">tops for Man</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">tops for Woman</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">tops for kids</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">bottom for Man</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">bottom for Woman</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">bottom for kids</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">Footswear for Man</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">Footwear for Woman</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">Footwear for kids</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">Mobile</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">Smart watch</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">Ring</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">Nose pin</a></li>
+            <li class="options"><a href="http://127.0.0.1:5501/product.html">Necklace</a></li>
+          </ul>
+        </div>
+        <input type="text" id="inputfield" placeholder="search in all categorie">
+      </div>
+    </div>
+  </section>
+  <section class="feedback" id="feedback">
+    <h2>FEEDBACK</h2>
+    <div class="feed">
+      <form action="feedback.php" method="post">
+        <div>
+          <label for="name">Name: </label>
+          <input type="text" id="name" name="name">
+        </div>
+        <br>
+        <div>
+          <label for="address">FeedBack: </label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <br>
+        <button>Submit</button>
+      </form>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <form action="contact.php" method="post">
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name">
+      </div>
+      <br>
+      <div>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email">
+      </div>
+      <br>
+      <div>
+        <label for="number">Phone Number: </label>
+        <input type="phone" id="phone" name="phno">
+      </div>
+      <br>
+      <div>
+        <label for="address">Address: </label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <br>
+      <button>Submit</button>
+      </div>
+      </div>
+
+    </form>
+  </section>
+
+  <footer>
+    <div="nav">
+      <ul>
+        <li>
+          <link rel="icon" href="img/titleicon.png" type="image/x-icon">
+        </li>
+
+      </ul>
+      </div>
+
+  </footer>
+
+  <script>
+
+    let select = document.getElementById("select");
+    let list = document.getElementById("list");
+    let selecttext = document.getElementById("selecttext");
+    let inputfield = document.getElementById("inputfield");
+    let options = document.getElementsByClassName("options");
+
+
+    select.onclick = function () {
+      list.classList.toggle("open");
+
+    }
+    for (option of options) {
+      option.onclick = function () {
+        selecttext.innerHTML = this.innerHTML;
+        inputfield.placeholder = "search in " + selecttext.innerHTML;
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>

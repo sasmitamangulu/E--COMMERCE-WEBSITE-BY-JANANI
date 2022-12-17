@@ -1,0 +1,385 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+	--white-light: rgba(255, 255, 255, 0.5);
+	--alice-blue: #f8f9fa;
+	--carribean-green: #40c9a2;
+	--gray: #ededed;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+}
+
+/* Utility stylings */
+img {
+	width: 100%;
+	display: block;
+	height: 100%;
+}
+
+.container {
+	width: 88vw;
+	margin: 0 auto;
+	background: rgb(140, 136, 219);
+
+}
+
+.container h2,
+p {
+	text-align: center;
+	background-color: #68aa25;
+}
+
+.sm-title {
+	font-family: 'Roboto', sans-serif;
+	padding: 0.6rem 0;
+	text-transform: capitalize;
+}
+
+
+
+/* product section */
+.products {
+	background: var(--alice-blue);
+	padding: 3.2rem 0;
+
+}
+
+
+.rating {
+	color: var(--carribean-green);
+	height: 0.5cm;
+}
+
+
+.off-info .sm-title {
+	background: var(--carribean-green);
+	color: white;
+	display: inline-block;
+	padding: 0.5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+	z-index: 1;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+	.product {
+		margin-right: 1rem;
+		margin-left: 1rem;
+	}
+}
+
+h1 {
+	width: 3%;
+	position: relative;
+	top: 10px;
+	left: 90%;
+	cursor: pointer;
+}
+
+h1:before {
+	content: attr(data-count);
+	color: white;
+	position: absolute;
+	right: 16px;
+	font-size: 15px;
+	text-align: center;
+	top: -12px;
+	width: 20px;
+	height: 20px;
+	background: red;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+h1.zero:before {
+	opacity: 1;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height:5px;
+    padding: 50px 100px;
+    z-index: 100000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    background: rgb(227, 185, 199);
+
+}
+.content
+{
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+.rightnav
+{
+	border: 1px ;
+  width:100%;
+  text-align: center;
+}
+.rightnav ul
+{
+   
+     list-style: none;
+    float:right;
+    color:rgb(192, 11, 11);
+	position:relative;
+	margin:0;
+	padding: 0;
+}
+.rightnav ul a{
+	text-decoration: none;
+	line-height: 32px;
+	padding :0 px;
+	display: block;
+
+}
+.rightnav ul li
+{
+  
+  position:relative;
+    float:left;
+	margin :0;
+	padding:0;
+
+}
+.rightnav ul ul{
+	position: absolute;
+	background-color: #40c9a2;
+	top: 100%;
+	left:0;
+	display: none;
+
+}
+.rightnav ul li a{
+  text-decoration: none;
+  font: size 5px;
+  padding:20px;
+  color:rgb(221, 127, 213);
+  display: block;
+}
+.rihtnav ul ul li
+{
+	float:none;
+	width:200px
+}
+
+.rightnav ul li:hover{
+  border-radius: 3px;
+
+}
+.rightnav ul li:hover> ul{
+	display: block;
+  
+  }
+.rightnav ul li a:hover{
+  background: #555;
+  color:rgb(109, 33, 33);
+}
+.logo {
+    color: rgb(223, 102, 17);
+    font-size: 20px;
+    background: none;
+}
+
+section {
+	margin: 100px auto;
+	width: 90%;
+	height: 400px;
+	display: flex;
+	justify-content: space-around;
+}
+
+section #topm {
+	margin: 200px auto;
+	width: 90%;
+	height: 400px;
+	display: flex;
+	justify-content: space-around;
+}
+
+section div {
+	display: block;
+	height: 80%;
+	background: #f5f5f5;
+	padding: 1%;
+	position: relative;
+}
+
+img {
+	width: 300px;
+	height: 186px;
+}
+
+p {
+	margin: 5px;
+}
+
+h6 {
+	width: 50px;
+	padding: 5px;
+	margin: 10px;
+	font-size: 15px;
+}
+
+button {
+	padding: 5px;
+	background: red;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	color: #fafafa;
+	cursor: pointer;
+}
+
+section #topm div span {
+	position: absolute;
+	top: 14px;
+	left: 13px;
+	background: red;
+	width: 300px;
+	height: 186px;
+	display: none;
+}
+
+section div span img {
+	width: 100%;
+	height: 100%;
+}
+
+section div:nth-child(1)>span.active {
+	animation: first 0.5s ease-in;
+	z-index: 2;
+	display: block;
+
+}
+
+section div:nth-child(2)>span.active {
+	animation: second 0.5s ease-in;
+	z-index: 2;
+	display: block;
+
+}
+
+section div:nth-child(3)>span.active {
+	animation: third 0.5s ease-in;
+	z-index: 2;
+	display: block;
+
+}
+
+section div:nth-child(4)>span.active {
+	animation: four 0.5s ease-in;
+	z-index: 2;
+	display: block;
+
+}
+
+@keyframes first {
+	to {
+		width: 30px;
+		height: 20px;
+		left: 1290px;
+		top: -70px;
+	}
+}
+
+@keyframes second {
+	to {
+		width: 30px;
+		height: 20px;
+		left: 948px;
+		top: -70px;
+	}
+}
+
+@keyframes third {
+	to {
+		width: 30px;
+		height: 20px;
+		left: 606px;
+		top: -70px;
+	}
+}
+
+@keyframes four {
+	to {
+		width: 30px;
+		height: 20px;
+		left: 265px;
+		top: -70px;
+	}
+}
+
+.select {
+	width: 60%;
+	height: 580px;
+	padding: 5%;
+	background: #222;
+	position: absolute;
+	top: -1000px;
+	left: 20%;
+	transition: 0.5s;
+	overflow-y: auto;
+	margin: auto;
+}
+
+.select.display {
+	top: 10px;
+}
+
+.select div {
+	width: 100%;
+	height: 200px;
+	display: flex;
+	padding: 5px;
+	border: 1px solid white;
+	position: relative;
+	margin: 5px auto;
+}
+
+.select div img {
+	width: 300px;
+	height: 100%;
+}
+
+.select div p {
+	padding: 35px;
+	color: white;
+}
+
+.select div h6,
+.select div button {
+	position: absolute;
+	left: 45%;
+	top: 50%;
+	color: white;
+}
+
+.select div button {
+	left: 60%;
+	top: 55%;
+}
+
+.select div span {
+	display: none;
+}
